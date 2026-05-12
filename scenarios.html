@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wargame Scenarios — SENTINEL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">SENTINEL</a>
+  <div class="nav-links">
+    <a href="intelligence.html">Intelligence</a>
+    <a href="weapons.html">Platforms</a>
+    <a href="scenarios.html" class="active">Scenarios</a>
+    <a href="investment.html">Investment</a>
+    <a href="technology.html">Technology</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="nav-status"><span class="status-dot"></span><span class="status-text">LIVE ANALYSIS</span></div>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">MODULE 03</div>
+    <h1>WARGAME <em>SCENARIOS</em></h1>
+    <p>Five conflict scenarios modeled for supply chain cascade failure. Each scenario maps trigger events to Day 1, Week 1, Month 1, and Year 1 impacts — identifying which weapon systems go offline first and at what cost.</p>
+    <div style="margin-top:1rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--text3);">
+      Based on: CSIS 'Lights Out?' Taiwan Blockade Wargame (26 iterations, Jul 2025) · SAIS Review Dec-2025 · FPRI Oct-2025 · War on the Rocks Aug-2025
+    </div>
+  </div>
+</div>
+
+<section class="data-section">
+  <div class="notice-box"><strong>Methodology:</strong> Each scenario is based on publicly available wargame analysis, defense reports, and supply chain data. Timelines represent synthesized estimates from multiple sources. These are analytical tools for understanding vulnerability — not predictions of specific events.</div>
+
+  <!-- SCENARIO 1 -->
+  <div class="scenario-card sc-critical">
+    <div class="scenario-header" onclick="toggleScenario(this)">
+      <div class="scenario-emoji">🇨🇳</div>
+      <div class="scenario-title-wrap">
+        <div class="scenario-title">China Taiwan Strait Blockade</div>
+        <div class="scenario-trigger">PLA Navy blockades Taiwan Strait — TSMC offline, all REE/chip exports halted simultaneously</div>
+      </div>
+      <div class="scenario-risk-badge"><span class="badge badge-critical">CRITICAL</span></div>
+      <div class="scenario-toggle">▼</div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-timeline">
+        <div class="timeline-phase">
+          <div class="timeline-label">Day 1</div>
+          <div class="timeline-content">• TSMC Taiwan fabs inaccessible<br>• REE magnet exports to US cease<br>• Ga/Ge/Sb bans enforced at 100%<br>• Global chip spot prices +200–400%</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Week 1</div>
+          <div class="timeline-content">• F-35 actuator magnet stockpile drawdown begins<br>• GaN radar T/R module production halts<br>• South Korea memory chip exports rerouted<br>• Japan/Korea ally sourcing activated</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Month 1</div>
+          <div class="timeline-content">• DoD heavy REE stockpile (Dy/Tb) depleting<br>• Advanced chip shortage hits missile guidance computers<br>• AMRAAM/Javelin/Patriot production -30–50%<br>• Emergency AUKUS material sharing activated</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 1</div>
+          <div class="timeline-content">• F-35 production falls toward zero without new REE magnets<br>• Advanced UAV production severely constrained<br>• $2.7T estimated global GDP loss from chip disruption<br>• Allied industrial base partially mobilized</div>
+        </div>
+      </div>
+      <div class="scenario-impact-grid">
+        <div class="impact-box">
+          <div class="impact-box-title">First Systems Offline</div>
+          <div class="impact-box-content">AN/TPY-2 radar (GaN) · F-35 APG-81 AESA · Javelin (Ge seeker) · New Virginia-class SSNs</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Degraded by 6 Months</div>
+          <div class="impact-box-content">F-35 production · AMRAAM (AP+GaN+Ge) · Columbia-class SSBN · All advanced guided munitions</div>
+        </div>
+        <div class="impact-box impact-econ">
+          <div class="impact-box-title">Estimated Economic Impact</div>
+          <div class="impact-box-content">$2.7T GDP (Year 1) + $500B defense production losses</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Recovery Timeline</div>
+          <div class="impact-box-content">Chips: 5–8 years · REE magnets: 3–5 years · Full recovery: 8–10 years</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem; padding:1rem; background:var(--bg3); border:1px solid var(--border); border-radius:3px;">
+        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem;">Mitigation Actions</div>
+        <div style="font-size:0.82rem; color:var(--text2); line-height:1.65;">Activate NDS stockpile immediately · Emergency AUKUS/Quad material sharing · DPA Title III emergency production orders · Accelerate MP Materials/Lynas USA · Begin chip rationing for DoD priority programs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 2 -->
+  <div class="scenario-card sc-critical">
+    <div class="scenario-header" onclick="toggleScenario(this)">
+      <div class="scenario-emoji">☢️</div>
+      <div class="scenario-title-wrap">
+        <div class="scenario-title">Nuclear Deterrence Supply Crisis</div>
+        <div class="scenario-trigger">REE/Ga/Ge bans + DRC cobalt suspension + Wolfspeed bankruptcy compound — nuclear sustainment at risk</div>
+      </div>
+      <div class="scenario-risk-badge"><span class="badge badge-critical">CRITICAL</span></div>
+      <div class="scenario-toggle">▼</div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-timeline">
+        <div class="timeline-phase">
+          <div class="timeline-label">Day 1</div>
+          <div class="timeline-content">• AP from AMPAC continues (domestic)<br>• HMX from Holston AAP continues<br>• Guidance electronics (Ge/Ga) cannot be procured<br>• Cobalt for warhead superalloys constrained</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Week 1</div>
+          <div class="timeline-content">• Minuteman III guidance replacement parts backlog builds<br>• Columbia-class delivery slips further<br>• GBSD/Sentinel development flags electronics shortage<br>• Classified stockpiles of guidance components begin drawdown</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Month 1</div>
+          <div class="timeline-content">• STRATCOM alerts DoD to sustainment risk on legacy ICBM fleet<br>• Holston AP production adequate but guidance chips = constraint<br>• GBSD Milestone B review flags chip supply gaps<br>• Emergency classified chip procurement from allied foundries</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 1</div>
+          <div class="timeline-content">• Minuteman III operational availability falls below threshold<br>• Columbia-class delivery 2+ years further delayed<br>• Nuclear readiness posture degraded<br>• China gains strategic advantage</div>
+        </div>
+      </div>
+      <div class="scenario-impact-grid">
+        <div class="impact-box">
+          <div class="impact-box-title">First Systems at Risk</div>
+          <div class="impact-box-content">Minuteman III (Ge/Ga guidance parts) · New Columbia-class hulls (REE delay)</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Degraded by 6 Months</div>
+          <div class="impact-box-content">Entire ICBM sustainment fleet · GBSD development program · Columbia production schedule</div>
+        </div>
+        <div class="impact-box impact-econ">
+          <div class="impact-box-title">Strategic Consequence</div>
+          <div class="impact-box-content" style="font-size:0.85rem; color:var(--red2);">Existential deterrence risk — not quantifiable in $. Strategic parity erosion.</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Recovery Timeline</div>
+          <div class="impact-box-content">Guidance chips: 3–5 years · REE: 3–5 years · Full recovery: 7–10 years</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 3 -->
+  <div class="scenario-card sc-high">
+    <div class="scenario-header" onclick="toggleScenario(this)">
+      <div class="scenario-emoji">🚢</div>
+      <div class="scenario-title-wrap">
+        <div class="scenario-title">South China Sea + Hormuz Crisis</div>
+        <div class="scenario-trigger">Simultaneous SCS blockade AND Iranian Strait of Hormuz closure — 60% REE shipping + 20% global oil disrupted</div>
+      </div>
+      <div class="scenario-risk-badge"><span class="badge badge-high">HIGH</span></div>
+      <div class="scenario-toggle">▼</div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-timeline">
+        <div class="timeline-phase">
+          <div class="timeline-label">Day 1</div>
+          <div class="timeline-content">• REE shipments from China/Malaysia disrupted<br>• Titanium from Kazakhstan (via Persian Gulf) cut<br>• Oil price spike to $200+/bbl<br>• Cobalt DRC→Europe route now Cape only (+30 days)</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Week 1</div>
+          <div class="timeline-content">• US Navy diverts to Hormuz — stretching platform availability<br>• Titanium sponge supply falls<br>• REE stockpile drawdown begins<br>• Defense logistics costs spike</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Month 1</div>
+          <div class="timeline-content">• F-35/aircraft REE component shortages emerge<br>• Titanium alloy for new airframe production falls short<br>• Cobalt for jet engine superalloys constrained<br>• Defense logistics costs +40–60%</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 1</div>
+          <div class="timeline-content">• Production rates for new F-35s/B-21s fall<br>• Ship maintenance backlog grows (titanium fittings)<br>• Cobalt superalloy jet engine parts shortage<br>• Defense budget impact cascades</div>
+        </div>
+      </div>
+      <div class="scenario-impact-grid">
+        <div class="impact-box">
+          <div class="impact-box-title">First Systems Affected</div>
+          <div class="impact-box-content">New F-35 production rate · Arleigh Burke DDG titanium fittings · Cobalt-dependent engine overhauls</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Degraded by 6 Months</div>
+          <div class="impact-box-content">F-35/B-21 new production · Arleigh Burke maintenance · Tactical missile production</div>
+        </div>
+        <div class="impact-box impact-econ">
+          <div class="impact-box-title">Estimated Economic Impact</div>
+          <div class="impact-box-content">$800B–$1.2T (oil shock + logistics + production losses)</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Recovery Timeline</div>
+          <div class="impact-box-content">Logistics: 6–18 months · REE/Ti: 2–4 years · Full: 4–6 years</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 4 -->
+  <div class="scenario-card sc-critical">
+    <div class="scenario-header" onclick="toggleScenario(this)">
+      <div class="scenario-emoji">💣</div>
+      <div class="scenario-title-wrap">
+        <div class="scenario-title">High-Intensity Conventional War — Munitions Surge</div>
+        <div class="scenario-trigger">Large-scale conventional conflict (e.g., NATO Article 5) — all munitions production must surge simultaneously to wartime rates</div>
+      </div>
+      <div class="scenario-risk-badge"><span class="badge badge-critical">CRITICAL</span></div>
+      <div class="scenario-toggle">▼</div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-timeline">
+        <div class="timeline-phase">
+          <div class="timeline-label">Day 1</div>
+          <div class="timeline-content">• AP (AMPAC) immediately becomes binding constraint on ALL PGMs<br>• 155mm shell demand 8–10x current capacity<br>• GMLRS rockets depleted within days at wartime rate<br>• HMX/RDX demand spikes 10x Holston capacity</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Week 1</div>
+          <div class="timeline-content">• AP shortage forces triage: AMRAAM vs Patriot vs Minuteman vs HIMARS<br>• Artillery shell shortage mirrors Ukraine experience at larger scale<br>• DPA invoked; civilian factories recruited for shell casings<br>• TNT shortage emerges (10–15x below wartime need)</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Month 1</div>
+          <div class="timeline-content">• US fires through precision munition stockpile<br>• Holston AAP running 24/7 but still 50% of wartime need<br>• DoD requests allied manufacturing (Poland, Japan coproduction)<br>• Nitrocellulose wood-pulp pivot urgent</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 1</div>
+          <div class="timeline-content">• PGM production at 30–40% of wartime consumption rate<br>• Artillery shell production at 8–12% of wartime need<br>• US reaches strategic munitions shortage threshold<br>• Adversary gains conventional fire superiority</div>
+        </div>
+      </div>
+      <div class="scenario-impact-grid">
+        <div class="impact-box">
+          <div class="impact-box-title">First Systems Offline</div>
+          <div class="impact-box-content">ALL solid-fuel PGMs (AP constraint) · 155mm artillery (production gap) · GMLRS rockets (AP + demand surge)</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Degraded by 6 Months</div>
+          <div class="impact-box-content">AMRAAM · Patriot PAC-3 · Javelin · HIMARS GMLRS · All artillery munitions</div>
+        </div>
+        <div class="impact-box impact-econ">
+          <div class="impact-box-title">Annual Production Gap</div>
+          <div class="impact-box-content">$300–500B annual munitions production gap vs wartime need</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Recovery Timeline</div>
+          <div class="impact-box-content">Munitions surge: 2–3 years · AP expansion: 18 months · Full: 3–5 years</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem; padding:1rem; background:rgba(224,56,48,0.06); border:1px solid rgba(224,56,48,0.2); border-radius:3px;">
+        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--red2); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem;">Priority Actions (Must Start NOW)</div>
+        <div style="font-size:0.82rem; color:var(--text2); line-height:1.65;">Immediately begin AMPAC second-facility construction · Pre-negotiate surge contracts with all munitions primes · Fund Warstopper program 10x per DBB recommendation · Build 180-day AP/HMX/RDX strategic reserve · Qualify wood-pulp NC at scale</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCENARIO 5 -->
+  <div class="scenario-card sc-high">
+    <div class="scenario-header" onclick="toggleScenario(this)">
+      <div class="scenario-emoji">🌐</div>
+      <div class="scenario-title-wrap">
+        <div class="scenario-title">Economic Warfare — China Market Manipulation</div>
+        <div class="scenario-trigger">China floods cobalt/lithium/graphite/magnesium markets for 3–5 years, bankrupting all Western producers (Jervois 2025 precedent replicated at scale)</div>
+      </div>
+      <div class="scenario-risk-badge"><span class="badge badge-high">HIGH (Slow-Burn)</span></div>
+      <div class="scenario-toggle">▼</div>
+    </div>
+    <div class="scenario-body">
+      <div class="scenario-timeline">
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 1</div>
+          <div class="timeline-content">• Commodity prices collapse across Co/Li/graphite/Mg<br>• Western mining/processing projects shelved (uneconomical)<br>• PE-backed defense suppliers exit market<br>• China market share quietly grows 70% → 90%+</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 2</div>
+          <div class="timeline-content">• Albemarle cuts Li capex further<br>• Syrah Technologies graphite unable to raise capital<br>• Sub-tier defense suppliers exit market quietly<br>• DoD supply chain audits reveal increasing Chinese penetration</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 3</div>
+          <div class="timeline-content">• DoD discovers 2–3 additional sole-source situations created by manipulation<br>• Battery supply for military UAVs now 90%+ China-dependent<br>• DPA investments insufficient to offset market forces<br>• Military Li-ion battery production falls</div>
+        </div>
+        <div class="timeline-phase">
+          <div class="timeline-label">Year 5+</div>
+          <div class="timeline-content">• China achieves near-monopoly on Li/Co/graphite processing<br>• Any future conflict activates immediate supply cutoff capability<br>• US defense battery supply entirely China-dependent<br>• No market-based solution exists — only government intervention</div>
+        </div>
+      </div>
+      <div class="scenario-impact-grid">
+        <div class="impact-box">
+          <div class="impact-box-title">Systems Eventually at Risk</div>
+          <div class="impact-box-content">MQ-9 Reaper (batteries) · Soldier electronics (IVAS, radios) · Forward base power systems · All UAV categories</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Proof of Concept (Realized)</div>
+          <div class="impact-box-content"><strong style="color:var(--red2);">Jervois Global</strong> — the only US cobalt mine — went bankrupt in 2025 after Chinese price manipulation. This scenario already happened once.</div>
+        </div>
+        <div class="impact-box impact-econ">
+          <div class="impact-box-title">Long-Term Remediation Cost</div>
+          <div class="impact-box-content">$200–400B to rebuild domestic mining/processing base</div>
+        </div>
+        <div class="impact-box">
+          <div class="impact-box-title">Recovery Timeline</div>
+          <div class="impact-box-content">10–15 years to rebuild competitive domestic mining/processing base. Longest recovery of any scenario.</div>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem; padding:1rem; background:var(--amber-dim); border:1px solid rgba(232,160,32,0.25); border-radius:3px;">
+        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--amber); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem;">⚠️ This Scenario Is Already In Progress</div>
+        <div style="font-size:0.82rem; color:var(--text2); line-height:1.65;">China has deployed this exact strategy against cobalt. Jervois Global is bankrupt. The same pattern is now running against lithium, graphite, and magnesium. DoD must act with price floors, strategic purchases, and DPA investments <em>before</em> more companies fail — not after.</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">SENTINEL</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="intelligence.html">Intelligence</a><a href="weapons.html">Platforms</a><a href="investment.html">Investment</a><a href="technology.html">Technology</a><a href="about.html">About</a>
+    </div>
+    <div class="footer-disclaimer">All data sourced from publicly available government reports, academic research, and financial disclosures. UNCLASSIFIED. For educational and research purposes only.</div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

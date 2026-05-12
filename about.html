@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About & Methodology — SENTINEL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">SENTINEL</a>
+  <div class="nav-links">
+    <a href="intelligence.html">Intelligence</a>
+    <a href="weapons.html">Platforms</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="investment.html">Investment</a>
+    <a href="technology.html">Technology</a>
+    <a href="about.html" class="active">About</a>
+  </div>
+  <div class="nav-status"><span class="status-dot"></span><span class="status-text">LIVE ANALYSIS</span></div>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">MODULE 06</div>
+    <h1>ABOUT <em>SENTINEL</em></h1>
+    <p>Methodology, scoring model, data sources, and project background. SENTINEL is an open-source defense supply chain intelligence project using publicly available government, academic, and financial data.</p>
+  </div>
+</div>
+
+<section class="data-section">
+  <div class="about-grid">
+    <div class="about-content">
+
+      <h2>What Is SENTINEL?</h2>
+      <p>SENTINEL is a defense supply chain intelligence platform that aggregates and analyzes publicly available data on the critical material dependencies, geopolitical chokepoints, and industrial base vulnerabilities that determine whether the United States can build, maintain, and deploy its most advanced weapons systems.</p>
+      <p>The project spans 15 data modules covering 27 critical materials, 22 weapon platforms, 13 supplier nations, 12 key companies, 5 wargame scenarios, and 11 technology substitution pathways. All data is sourced from publicly available government reports, financial filings, academic research, and news sources. Nothing in this project is classified.</p>
+
+      <h2>Composite Risk Scoring Model</h2>
+      <p>Each material and weapons system is scored on six dimensions, each rated 1–10 (10 = highest risk). Dimension weights are adjustable for different threat scenarios.</p>
+      <div style="background:var(--bg2); border:1px solid var(--border); padding:1.5rem; border-radius:4px; margin-bottom:2rem;">
+        <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--amber); letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1rem;">Default Balanced Weighting</div>
+        <div class="score-weight-row"><span>S1 — Materials & Components Supply</span><span class="score-weight-num">25%</span></div>
+        <div class="score-weight-row"><span>S2 — Geopolitical & Alliance Risk</span><span class="score-weight-num">20%</span></div>
+        <div class="score-weight-row"><span>S3 — Industrial Base Capacity</span><span class="score-weight-num">20%</span></div>
+        <div class="score-weight-row"><span>S4 — Logistics & Transport</span><span class="score-weight-num">15%</span></div>
+        <div class="score-weight-row"><span>S5 — Economic & Financial Stability</span><span class="score-weight-num">10%</span></div>
+        <div class="score-weight-row"><span>S6 — Regulatory & Policy Environment</span><span class="score-weight-num">10%</span></div>
+      </div>
+      <p>Weapons platform scoring uses a different weighting: Materials ×0.30 + Industrial Base ×0.25 + Geopolitical ×0.25 + Logistics ×0.20, reflecting the more direct material dependency of hardware systems.</p>
+      <p>The full scoring engine with adjustable scenario weights is available as an Excel workbook download (see below). Five pre-built scenarios — China conflict, industrial surge, logistics crisis, economic warfare, and balanced peacetime — adjust weights to model different threat environments.</p>
+
+      <h2>Risk Band Definitions</h2>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:2rem;">
+        <div style="background:rgba(224,56,48,0.08); border:1px solid rgba(224,56,48,0.2); padding:1rem; border-radius:3px;">
+          <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--red2); font-weight:700; margin-bottom:0.4rem;">CRITICAL — Score ≥ 9.0</div>
+          <div style="font-size:0.82rem; color:var(--text2);">Immediate action required. Active disruptions likely or in progress. Wartime production or strategic operations at direct risk. No viable near-term alternative.</div>
+        </div>
+        <div style="background:rgba(224,96,32,0.08); border:1px solid rgba(224,96,32,0.2); padding:1rem; border-radius:3px;">
+          <div style="font-family:var(--font-mono); font-size:0.65rem; color:#ff8040; font-weight:700; margin-bottom:0.4rem;">HIGH — Score 7.5–8.9</div>
+          <div style="font-size:0.82rem; color:var(--text2);">Significant vulnerability. Disruption probable under adversarial conditions. Mitigation programs needed within 1–3 years to avoid production impact.</div>
+        </div>
+        <div style="background:rgba(232,160,32,0.08); border:1px solid rgba(232,160,32,0.2); padding:1rem; border-radius:3px;">
+          <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--amber); font-weight:700; margin-bottom:0.4rem;">MEDIUM — Score 6.0–7.4</div>
+          <div style="font-size:0.82rem; color:var(--text2);">Moderate vulnerability. Supply disruption possible but manageable. Monitor and develop contingency plans. Substitution or diversification possible within 3–5 years.</div>
+        </div>
+        <div style="background:rgba(56,176,96,0.06); border:1px solid rgba(56,176,96,0.15); padding:1rem; border-radius:3px;">
+          <div style="font-family:var(--font-mono); font-size:0.65rem; color:var(--green); font-weight:700; margin-bottom:0.4rem;">LOW — Score &lt; 6.0</div>
+          <div style="font-size:0.82rem; color:var(--text2);">Manageable risk. Multiple supply sources or strong domestic capability. Standard procurement practices adequate. Monitor for deterioration.</div>
+        </div>
+      </div>
+
+      <h2>Project Scope & Limitations</h2>
+      <p>SENTINEL uses publicly available data and cannot incorporate classified intelligence assessments, specific classified stockpile levels, or non-public DoD acquisition data. Risk scores represent analytical estimates based on open-source information and should be treated as directional assessments, not definitive security evaluations.</p>
+      <p>All supply disruption scenarios are analytical constructs for understanding vulnerability — not predictions of specific events. Wargame scenarios are based on publicly available research from CSIS, RAND, SAIS, and other open-source think tanks.</p>
+      <p>Data is current as of May 2026. The supply chain landscape changes rapidly — China's export control regime has escalated every quarter since December 2024. Figures should be verified against current sources for operational decision-making.</p>
+
+      <h2>Download the Full Dataset</h2>
+      <p>The complete 15-sheet Excel workbook is available for download, including the interactive composite risk scoring engine with adjustable scenario weights, all data tables, and the wargame scenario analysis.</p>
+      <div style="margin-top:1rem;">
+        <a href="#" class="btn btn-primary" style="margin-right:1rem;">Download Excel Dataset</a>
+        <a href="index.html" class="btn btn-outline">Back to Home</a>
+      </div>
+
+    </div>
+
+    <div>
+      <div class="scoring-box">
+        <h3>Primary Data Sources</h3>
+        <ul class="source-list">
+          <li>USGS 2025 Critical Minerals List (Interior Dept.)</li>
+          <li>IEA Global Critical Minerals Outlook 2025</li>
+          <li>GAO-24-107176 (Critical Materials, Sep 2024)</li>
+          <li>GAO-26-107882 (CHIPS Act, Dec 2025)</li>
+          <li>Govini "Rock to Rocket" 2025</li>
+          <li>CSIS "Lights Out?" Taiwan Blockade Wargame (Jul 2025, 26 iterations)</li>
+          <li>DBB FY25-01 Industry Partnerships for Crises (Nov 2024)</li>
+          <li>CNAS "From Production Lines to Front Lines" (Apr 2025)</li>
+          <li>USCC Chapter 9: "Chained to China" (Nov 2025)</li>
+          <li>AIA Critical Minerals Report (Mar 2026)</li>
+          <li>J.P. Morgan Critical Minerals Research (Feb 2026)</li>
+          <li>GQG Partners REE Analysis (Nov 2025)</li>
+          <li>War on the Rocks (Aug 2025)</li>
+          <li>FPRI "America's Scale Problem" (Oct 2025)</li>
+          <li>Breaking Defense (Jan/Apr 2026)</li>
+          <li>SAIS Review Dec 2025 ($2.7T estimate)</li>
+          <li>MWI West Point (Jul 2025)</li>
+          <li>NATO Critical Materials List (Dec 2024)</li>
+          <li>MP Materials SEC 8-K filings (2025–2026)</li>
+          <li>Wolfspeed Chapter 11 filings (2025)</li>
+          <li>Rare Earth Exchanges (Dec 2025)</li>
+          <li>World Bank WGI 2024</li>
+          <li>Caldara-Iacoviello GPR Index</li>
+          <li>CRS IF10548 Defense Industrial Base (Dec 2025)</li>
+          <li>NAM Critical Minerals Comment (Mar 2026)</li>
+          <li>Financial Sense / 24/7 Wall St. (2026)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">SENTINEL</div>
+    <div class="footer-desc">Defense Supply Chain Intelligence Platform</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="intelligence.html">Intelligence</a><a href="weapons.html">Platforms</a><a href="scenarios.html">Scenarios</a><a href="investment.html">Investment</a><a href="technology.html">Technology</a>
+    </div>
+    <div class="footer-disclaimer">All data sourced from publicly available government reports, academic research, and financial disclosures. UNCLASSIFIED. For educational and research purposes only. Not financial advice. Not an official government publication.</div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

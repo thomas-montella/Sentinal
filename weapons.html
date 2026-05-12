@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weapons Platforms — SENTINEL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Barlow+Condensed:wght@300;400;600;700;900&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="nav-logo">SENTINEL</a>
+  <div class="nav-links">
+    <a href="intelligence.html">Intelligence</a>
+    <a href="weapons.html" class="active">Platforms</a>
+    <a href="scenarios.html">Scenarios</a>
+    <a href="investment.html">Investment</a>
+    <a href="technology.html">Technology</a>
+    <a href="about.html">About</a>
+  </div>
+  <div class="nav-status"><span class="status-dot"></span><span class="status-text">LIVE ANALYSIS</span></div>
+</nav>
+
+<main>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="section-label">MODULE 02</div>
+    <h1>WEAPONS <em>PLATFORMS</em></h1>
+    <p>22 US defense platforms assessed for supply chain vulnerability. Composite risk scores calculated across materials supply, geopolitical exposure, industrial base capacity, and logistics risk.</p>
+    <div style="margin-top:1.5rem; display:flex; gap:1rem; flex-wrap:wrap;">
+      <span class="badge badge-critical" style="font-size:0.7rem; padding:0.3rem 0.8rem;">CRITICAL ≥ 9.0</span>
+      <span class="badge badge-high" style="font-size:0.7rem; padding:0.3rem 0.8rem;">HIGH ≥ 7.5</span>
+      <span class="badge badge-medium" style="font-size:0.7rem; padding:0.3rem 0.8rem;">MEDIUM ≥ 6.0</span>
+      <span class="badge badge-low" style="font-size:0.7rem; padding:0.3rem 0.8rem;">LOW &lt; 6.0</span>
+      <span style="font-family:var(--font-mono); font-size:0.65rem; color:var(--text3); align-self:center;">Scoring: Materials ×0.30 + Industrial ×0.25 + Geopolitical ×0.25 + Logistics ×0.20</span>
+    </div>
+  </div>
+</div>
+
+<section class="data-section">
+  <div class="notice-box"><strong>Key Finding (Govini 2025):</strong> More than 80,000 parts across 1,900 weapon systems incorporate antimony, gallium, germanium, tungsten, or tellurium — meaning <strong>78% of all DoD weapon systems are potentially affected</strong> by China's export bans. Over 91% of Navy weapon systems rely on these materials.</div>
+
+  <!-- FILTER BAR -->
+  <div style="display:flex; gap:0.75rem; margin-bottom:2rem; flex-wrap:wrap;">
+    <button class="filter-btn active" data-filter="all">All Platforms</button>
+    <button class="filter-btn" data-filter="aircraft">Aircraft</button>
+    <button class="filter-btn" data-filter="naval">Naval</button>
+    <button class="filter-btn" data-filter="land">Land Systems</button>
+    <button class="filter-btn" data-filter="strategic">Strategic</button>
+    <button class="filter-btn" data-filter="space">Space & ISR</button>
+    <button class="filter-btn" data-filter="critical-only">Critical Only</button>
+  </div>
+
+  <div class="platform-grid" id="platformGrid">
+
+    <!-- AIRCRAFT -->
+    <div class="platform-card pc-critical" data-category="aircraft" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">F-35 Lightning II</div>
+          <div class="platform-service">USAF / USN / USMC · Lockheed Martin</div>
+        </div>
+        <div class="platform-score score-critical">9.6</div>
+      </div>
+      <div class="platform-ree">⚗️ 917–920 lbs rare earth content per aircraft</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Neodymium/Dysprosium (flight control actuators), Terbium (magnets), Gallium (AESA radar), Germanium (IR sensors), Samarium-Cobalt (turbomachine magnets)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: F-35 deliveries halted 2022 — Chinese SmCo magnet found in Honeywell turbomachine. REE controls 2025 tightening.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="aircraft" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">B-21 Raider</div>
+          <div class="platform-service">USAF Stealth Bomber · Northrop Grumman</div>
+        </div>
+        <div class="platform-score score-critical">9.0</div>
+      </div>
+      <div class="platform-ree">⚗️ ~800–1,000 lbs REE content (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Titanium (airframe), Neodymium/Dysprosium (actuators), Gallium (AESA radar), Advanced chips ≤5nm (mission computing), Graphite (stealth coatings)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: REE export controls apply; chip supply strained; titanium 100% import-dependent.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="aircraft" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">F-22 Raptor</div>
+          <div class="platform-service">USAF Air Superiority · Lockheed Martin</div>
+        </div>
+        <div class="platform-score score-critical">9.1</div>
+      </div>
+      <div class="platform-ree">⚗️ ~800 lbs REE content (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Titanium (60% of airframe by weight), Neodymium/Dysprosium (flight controls), Gallium (radar), Rhenium (F119 turbine blades), Beryllium (avionics)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: Production ended 2011; sustainment REE/titanium components at risk.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="aircraft" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">F-16 Fighting Falcon</div>
+          <div class="platform-service">USAF / FMS Multirole · Lockheed Martin</div>
+        </div>
+        <div class="platform-score score-critical">9.1</div>
+      </div>
+      <div class="platform-ree">⚗️ ~300 lbs REE content (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Antimony (flame-resistant systems — 81% China-linked), Gallium (radar), Titanium (structural), Germanium (sensors)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: Antimony BAN Dec 2024 directly affects F-16. Chinese materials found in F-16 supply chain (2014).</span></div>
+    </div>
+
+    <div class="platform-card pc-high" data-category="aircraft" data-risk="high">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">MQ-9 Reaper / MQ-1C</div>
+          <div class="platform-service">USAF / USA Armed UAV · General Atomics</div>
+        </div>
+        <div class="platform-score score-high">7.9</div>
+      </div>
+      <div class="platform-ree">⚗️ ~50–100 lbs REE + battery materials</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Lithium (battery packs), Gallium (comms/EW), REE magnets (actuators), Advanced chips (mission processing), Cobalt (batteries)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 ACTIVE: Li-ion battery supply China-processed; GaN electronics strained; CATL blacklisted Jan 2025.</span></div>
+    </div>
+
+    <!-- NAVAL -->
+    <div class="platform-card pc-critical" data-category="naval" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Virginia-Class SSN</div>
+          <div class="platform-service">USN Nuclear Submarine · GD Electric Boat / HII</div>
+        </div>
+        <div class="platform-score score-critical">9.8</div>
+      </div>
+      <div class="platform-ree">⚗️ 9,200 lbs (~4.2 metric tons) rare earth content</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Neodymium/Dysprosium (electric drive motors — 2–4 kg each), Terbium (Terfenol-D sonar), Titanium (hull), Cobalt (superalloys), Gallium (electro-optic sensors)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: REE export controls constrain motor magnet supply. Only 2 US shipyards; running at ~1.3 boats/yr vs 2/yr target.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="naval" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Columbia-Class SSBN</div>
+          <div class="platform-service">USN Strategic Deterrent · GD Electric Boat</div>
+        </div>
+        <div class="platform-score score-critical">9.8</div>
+      </div>
+      <div class="platform-ree">⚗️ 9,000+ lbs REE content (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Neodymium/Dysprosium (propulsion), Terbium (sonar), Titanium (hull), HEU (nuclear fuel), Specialty electronics (launch systems)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 CRITICAL: Strategic nuclear deterrent — delivery delays directly threaten deterrence posture. Same REE constraints as Virginia-class.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="naval" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Arleigh Burke DDG</div>
+          <div class="platform-service">USN Surface Combatant · GD BIW / HII Ingalls</div>
+        </div>
+        <div class="platform-score score-critical">9.5</div>
+      </div>
+      <div class="platform-ree">⚗️ 5,200 lbs (~2.3 metric tons) rare earth content</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Neodymium (SPY-6 radar motors), Gallium (electro-optics — BAN active), Antimony (fire-resistant coatings — BAN active), Cobalt (propulsion superalloys), Titanium (hull/valves)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: Govini explicitly names Arleigh Burke among top-4 most impacted systems by Dec-2024 mineral bans.</span></div>
+    </div>
+
+    <div class="platform-card pc-high" data-category="naval" data-risk="high">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Gerald R. Ford CVN</div>
+          <div class="platform-service">USN Aircraft Carrier · HII Newport News</div>
+        </div>
+        <div class="platform-score score-high">8.5</div>
+      </div>
+      <div class="platform-ree">⚗️ 10,000+ lbs REE content (est. — largest surface ship)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Titanium (hull/propulsion shafts), REE magnets (EMALS catapult), Cobalt (nuclear propulsion alloys), Specialty electronics (all sensor systems)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: EMALS catapult REE motors constrained. USS Kennedy (CVN-79) sea trials 2025.</span></div>
+    </div>
+
+    <!-- LAND -->
+    <div class="platform-card pc-critical" data-category="land" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">M1A2 Abrams SEPv3</div>
+          <div class="platform-service">USA Main Battle Tank · GD Land Systems</div>
+        </div>
+        <div class="platform-score score-critical">9.1</div>
+      </div>
+      <div class="platform-ree">⚗️ ~500 lbs REE + specialty metals</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Tungsten (120mm APFSDS penetrators — BAN active), Titanium (armor), REE magnets (fire control), Nitroguanidine (propellant — 100% imported)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: Tungsten BAN Jan 2025 hits 120mm ammunition. Nitroguanidine 100% imported — zero US production.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="land" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Patriot PAC-3 / MSE</div>
+          <div class="platform-service">USA Air Defense · Raytheon / Lockheed</div>
+        </div>
+        <div class="platform-score score-critical">9.5</div>
+      </div>
+      <div class="platform-ree">⚗️ ~200 lbs per battery (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> REE magnets (seeker guidance), Ammonium perchlorate (solid rocket — sole source), Gallium (radar — BAN), Germanium (IR sensors — BAN)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: AP sole-source + Gallium BAN + Germanium BAN all simultaneously active. Record demand from Ukraine/Israel/Taiwan.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="land" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">HIMARS / M270 MLRS</div>
+          <div class="platform-service">USA Rocket Artillery · Lockheed Martin</div>
+        </div>
+        <div class="platform-score score-critical">9.1</div>
+      </div>
+      <div class="platform-ree">⚗️ ~100 lbs per launcher</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Ammonium perchlorate (GMLRS rocket motors — sole source), REE magnets (guidance), Gallium (electronics), Titanium (structural)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: AP sole-source is binding constraint. Ukraine war depleted GMLRS stockpiles; 12–18 month production backlog.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="land" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Javelin ATGM</div>
+          <div class="platform-service">USA / USMC / FMS Anti-Tank · Raytheon / Lockheed</div>
+        </div>
+        <div class="platform-score score-critical">9.3</div>
+      </div>
+      <div class="platform-ree">⚗️ ~50 lbs per missile</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Ammonium perchlorate (rocket motor), Germanium (IR seeker — BAN active), REE magnets (guidance), Indium (IR focal plane arrays)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: Germanium BAN Dec 2024 hits IR seeker directly. 40,000+ sent to Ukraine depleted stockpiles.</span></div>
+    </div>
+
+    <!-- STRATEGIC -->
+    <div class="platform-card pc-critical" data-category="strategic" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Minuteman III ICBM</div>
+          <div class="platform-service">USAF Strategic ICBM · Boeing / Northrop</div>
+        </div>
+        <div class="platform-score score-critical">9.5</div>
+      </div>
+      <div class="platform-ree">⚗️ ~300 lbs REE + specialty materials</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Antimony (fuze systems — 81% China-linked), REE magnets (guidance), Ammonium perchlorate (rocket motors), HMX (warhead fill), Tungsten (reentry vehicle)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 CRITICAL: Govini explicitly names Minuteman III among top-4 most impacted. Antimony BAN + AP sole-source both active. Nuclear deterrence at risk.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="strategic" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">AIM-120 AMRAAM</div>
+          <div class="platform-service">USAF / USN / FMS Air-to-Air · Raytheon</div>
+        </div>
+        <div class="platform-score score-critical">9.8</div>
+      </div>
+      <div class="platform-ree">⚗️ ~80 lbs per missile</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Ammonium perchlorate (sole source AP), Gallium (GaN active radar seeker — BAN), Germanium (proximity fuze — BAN), Advanced chips (seeker processing)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 CATASTROPHIC: AP sole-source + GaN BAN + Ge BAN simultaneously active + record demand. Production backlog 12–18 months.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="strategic" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Tomahawk LACM</div>
+          <div class="platform-service">USN / USAF Cruise Missile · Raytheon</div>
+        </div>
+        <div class="platform-score score-critical">9.3</div>
+      </div>
+      <div class="platform-ree">⚗️ ~100 lbs REE content</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> REE magnets (turbofan engine/guidance), AP (booster), Advanced chips (terrain computer), Gallium (datalink — BAN), Titanium (airframe)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: RTX CFO confirmed supply chain difficulty Q2 2025. Multiple active disruptions simultaneous. High operational tempo in Middle East.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="strategic" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">Sentinel (GBSD) LGM-35A</div>
+          <div class="platform-service">USAF Next-Gen ICBM · Northrop Grumman</div>
+        </div>
+        <div class="platform-score score-critical">9.3</div>
+      </div>
+      <div class="platform-ree">⚗️ ~300–400 lbs (est.)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> REE magnets (advanced guidance), AP (3-stage solid rocket), HMX (warhead), Advanced chips (modern guidance computers), Titanium (reentry structure)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: Development phase uses same constrained materials. $96B lifecycle program. IOC ~2030.</span></div>
+    </div>
+
+    <!-- SPACE & ISR -->
+    <div class="platform-card pc-critical" data-category="space" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">AN/TPY-2 Radar</div>
+          <div class="platform-service">USA Long-Range Radar (THAAD/Patriot) · Raytheon</div>
+        </div>
+        <div class="platform-score score-critical">9.5</div>
+      </div>
+      <div class="platform-ree">⚗️ ~500 lbs REE + GaN materials</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Gallium nitride (GaN T/R modules — BAN ACTIVE), Germanium (receiver — BAN), REE magnets (beam steering), Advanced chips (signal processing)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: GaN BAN is a direct production constraint. No GaN = no radar. No near-term substitute for radar T/R modules.</span></div>
+    </div>
+
+    <div class="platform-card pc-critical" data-category="space" data-risk="critical">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">F-35 AN/APG-81 AESA Radar</div>
+          <div class="platform-service">USAF/USN/USMC Avionics · Northrop Grumman</div>
+        </div>
+        <div class="platform-score score-critical">9.5</div>
+      </div>
+      <div class="platform-ree">⚗️ ~100 lbs (radar unit)</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> Gallium nitride (GaN T/R modules — BAN), Germanium (IR sensors — BAN), REE magnets (electronic scanning), Yttrium (YIG microwave filters)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🔴 ACTIVE: GaN BAN directly hits radar T/R modules. Northrop replacing Chinese-sourced YIG components (REE Exchanges Dec-2025).</span></div>
+    </div>
+
+    <div class="platform-card pc-high" data-category="space" data-risk="high">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">GPS Block III Satellites</div>
+          <div class="platform-service">USSF Navigation · Lockheed Martin</div>
+        </div>
+        <div class="platform-score score-high">8.5</div>
+      </div>
+      <div class="platform-ree">⚗️ ~200 lbs REE per satellite</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> REE magnets (attitude control), Advanced chips ≤5nm (signal processing), Gallium (solar arrays / GaAs cells — BAN), Cobalt (superalloys), PGMs (electronics)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: Chip supply strained; gallium BAN affects GaAs solar cells. GPS enables ALL precision munitions.</span></div>
+    </div>
+
+    <div class="platform-card pc-high" data-category="space" data-risk="high">
+      <div class="platform-header">
+        <div>
+          <div class="platform-name">RQ-4 Global Hawk / MQ-4C</div>
+          <div class="platform-service">USAF / USN HALE ISR UAV · Northrop Grumman</div>
+        </div>
+        <div class="platform-score score-high">8.1</div>
+      </div>
+      <div class="platform-ree">⚗️ ~200 lbs REE + sensor materials</div>
+      <div class="platform-materials"><strong>Critical materials:</strong> REE magnets (electric actuators), Advanced chips (sensor processing), Gallium (comms/SIGINT — BAN), Germanium (IR sensors — BAN)</div>
+      <div style="margin-top:0.75rem;"><span class="platform-disruption">🟠 PARTIAL: Ga/Ge BANs affect sensors and comms. Small fleet — any unit loss is strategically significant.</span></div>
+    </div>
+
+  </div><!-- /platform-grid -->
+</section>
+
+<!-- SUMMARY TABLE -->
+<section class="data-section" style="background:var(--bg2); border-top:1px solid var(--border);">
+  <div class="section-header">
+    <div class="section-label">SUMMARY</div>
+    <h2 class="section-title">Risk Score Ranking</h2>
+  </div>
+  <div class="data-table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Rank</th><th>Platform</th><th>Category</th><th>Composite Score</th><th>Risk Band</th><th>Active Disruption?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td class="cell-name">Virginia-Class SSN / Columbia SSBN</td><td>Naval</td><td><strong style="color:var(--red2)">9.8</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>2</td><td class="cell-name">AIM-120 AMRAAM</td><td>Missile</td><td><strong style="color:var(--red2)">9.8</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>3</td><td class="cell-name">F-35 Lightning II</td><td>Aircraft</td><td><strong style="color:var(--red2)">9.6</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>4</td><td class="cell-name">Arleigh Burke DDG</td><td>Naval</td><td><strong style="color:var(--red2)">9.5</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>5</td><td class="cell-name">Patriot PAC-3 / AN/TPY-2 / F-35 APG-81</td><td>Air Defense / Radar</td><td><strong style="color:var(--red2)">9.5</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>6</td><td class="cell-name">Minuteman III / Tomahawk / Sentinel</td><td>Strategic</td><td><strong style="color:var(--red2)">9.3–9.5</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>7</td><td class="cell-name">F-16 / F-22 / Javelin / HIMARS</td><td>Mixed</td><td><strong style="color:var(--orange)">9.1–9.3</strong></td><td><span class="badge badge-critical">CRITICAL</span></td><td><span class="badge badge-yes">YES</span></td></tr>
+        <tr><td>8</td><td class="cell-name">Gerald R. Ford CVN</td><td>Naval</td><td><strong style="color:var(--orange)">8.5</strong></td><td><span class="badge badge-high">HIGH</span></td><td><span class="badge badge-watch">PARTIAL</span></td></tr>
+        <tr><td>9</td><td class="cell-name">GPS Block III / RQ-4 Global Hawk</td><td>Space / ISR</td><td><strong style="color:var(--orange)">8.1–8.5</strong></td><td><span class="badge badge-high">HIGH</span></td><td><span class="badge badge-watch">PARTIAL</span></td></tr>
+        <tr><td>10</td><td class="cell-name">MQ-9 Reaper / B-21 Raider</td><td>UAV / Bomber</td><td><strong style="color:var(--orange)">7.9–9.0</strong></td><td><span class="badge badge-high">HIGH</span></td><td><span class="badge badge-watch">PARTIAL</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">SENTINEL</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a><a href="intelligence.html">Intelligence</a><a href="scenarios.html">Scenarios</a><a href="investment.html">Investment</a><a href="technology.html">Technology</a><a href="about.html">About</a>
+    </div>
+    <div class="footer-disclaimer">All data sourced from publicly available government reports, academic research, and financial disclosures. UNCLASSIFIED. For educational and research purposes only.</div>
+  </div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
